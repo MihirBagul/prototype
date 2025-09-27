@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align top instead of center */
+    height: 90vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.excel-grid {
+    position: fixed;
+    top: 25px;       /* adjust as needed */
+    left: 25px;
+    display: grid;
+    grid-template-columns: repeat(15, 120px);
+    grid-auto-rows: 40px;
+    gap: 0;
+    max-height: 90vh;
+    max-width: 95vw;       
+    overflow-y: auto;       
+    overflow-x: auto;       
+    border: 1px solid #000; 
+}
+
+
+.cell {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.header {
+    background-color: #d9d9d9;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.section {
+    background-color: #c0c0c0;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cell.section {
+    background-color: #c0c0c0;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    position: sticky;
+    z-index: 2;
+}
+
+.cell.header {
+    background-color: #d9d9d9;
+    font-weight: bold;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
